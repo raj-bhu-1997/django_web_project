@@ -1,0 +1,9 @@
+{% extends 'hostapp/base.html' %}
+
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button> SUBMIT</button>
+  </form>
+{% endblock %}

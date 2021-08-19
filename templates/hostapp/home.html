@@ -1,0 +1,15 @@
+{% extends 'hostapp/base.html' %}
+{% load static %}
+{% block content %}
+  <section id="home" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('{% static 'hostapp/images/bg.png' %}'); background-repeat: no-repeat;margin-right: -40px;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;">
+    <h1 class="text-center">ORGANIC SPICEY</h1><br>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, facere?</p>
+   <div class="input-group">
+     <input type="text" class="form-control mt-4" placeholder="Email address">
+     <button class="btn signin mt-4">submit</button>
+  </div>
+  </section>
+{% endblock %}

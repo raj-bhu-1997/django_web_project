@@ -1,0 +1,15 @@
+{% extends 'hostapp/base.html' %}
+{% block content %}
+  <h1>welcome to home page</h1>
+  <a href="{% url 'add_post' %}" class="btn btn-primary mb-5">create new product</a>
+  {% for ele in objects %}
+    <div class="card mb-5" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ ele.title }}</h5>
+    <p class="card-text">{{ ele.text }}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  </div>
+  {% endfor %}
+{% endblock %}

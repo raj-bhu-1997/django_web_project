@@ -1,0 +1,18 @@
+{% extends 'hostapp/base.html' %}
+{% load static %}
+{% block content %}
+  <h1>WELCOME TO MY WEBSITE</h1>
+  <div class="login_page">
+  {% if form.errors %}
+  <div class="alert alert-danger" role="alert">
+  {{ form.errors }}
+  </div>
+  {% endif %}
+  <form action="" method="POST" class="form-control">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="" id="" value="Submit" class="btn btn-primary"/>
+    <a href="{% url 'create' %}">Create Account</a>
+  </form>
+  </div>
+{% endblock %}
